@@ -24,12 +24,12 @@ body {
     line-height: 1.6;
 }
 
-/* Header and Navigation */
+/* Header and Navigation Styles Update */
 header {
-    background-color: var(--primary-color);
+    background-color: #005a87; /* Ensure this is dark enough for contrast */
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 nav ul {
@@ -43,13 +43,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff; /* Keeps link color white */
     text-decoration: none;
+    text-shadow: 1px 1px 2px #000000; /* Adds black shadow for better visibility */
 }
 
-nav ul li a:hover, nav ul li a:focus {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+/* Optional: Active Link Highlighting */
+nav ul li a.active {
+    font-weight: bold;
+    color: #f0f8ff; /* Very light blue or another contrasting color */
 }
 
 /* Main Content Styling */
@@ -173,4 +175,35 @@ button[type="submit"]:hover, button:hover {
         max-height: 300px; /* Smaller max height for small devices */
     }
 }
+
+/* Apply Google Fonts */
+body {
+    font-family: 'Open Sans', sans-serif; /* Sets Open Sans as the default body font */
+}
+
+header h1, main h2, main h3 {
+    font-family: 'Merriweather', serif; /* Merriweather for headings gives a distinguished look */
+}
+
+/* Enhancing the text appearance */
+header h1 {
+    font-weight: 700; /* Bold for the site title */
+    font-size: 2.5rem; /* Larger font size for the header */
+}
+
+main h2 {
+    font-size: 2rem; /* Appropriately large for subheadings */
+    color: var(--primary-color); /* Using the primary color for headings */
+}
+
+main h3 {
+    font-size: 1.5rem; /* Slightly smaller for section titles */
+    margin-top: 20px; /* Adds space above the section titles for better readability */
+}
+
+p {
+    font-size: 1rem; /* Standard size for body text */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
 
