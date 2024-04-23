@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Sitemap: https://fraser-valley-philatelic.netlify.app/sitemap.xml
