@@ -55,11 +55,11 @@ nav ul li a.active {
 }
 
 /* Main Content Styling */
+
 main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%; /* Adjusts the width to 80% of the viewport */
+    margin: 0 auto; /* Centers the main content horizontally */
+    padding: 20px; /* Adds padding for better spacing */
 }
 
 /* Footer Styling */
