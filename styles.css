@@ -1,27 +1,39 @@
-/* Basic Reset and General Styles */
+/* Root Variables for Easy Theme Management */
+:root {
+    --primary-color: #005a87;
+    --secondary-color: #004266;
+    --accent-color: #f4a261; /* A warm accent color */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color and background */
 }
 
 body {
     font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
-/* Header and Navigation Styles */
+/* Header and Navigation */
 header {
-    background-color: #005a87;
+    background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: 1rem 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -35,6 +47,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover, nav ul li a:focus {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
 /* Main Content Styling */
 main {
     padding: 20px;
@@ -45,21 +62,19 @@ main {
 
 /* Footer Styling */
 footer {
-    background-color: #333;
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
-/* Form and Input Styles */
+/* Forms and Input Styling */
 form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
@@ -69,12 +84,13 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], textarea, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px; /* Larger font size for better readability */
 }
 
 textarea {
@@ -82,24 +98,24 @@ textarea {
     resize: vertical;
 }
 
-button[type="submit"] {
-    background-color: #005a87;
+button[type="submit"], button {
+    background-color: var(--link-color);
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #004266;
+button[type="submit"]:hover, button:hover {
+    background-color: var(--link-hover-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
+        text-align: center;
         margin-top: 0.5rem;
     }
 
@@ -109,18 +125,19 @@ button[type="submit"]:hover {
     }
 }
 
-/* Social Media Link Styling */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Gallery and Interactive Elements */
+.gallery a {
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid transparent; /* Adds a border for hovered items */
 }
 
-ul li {
-    display: inline;
-    margin-right: 10px;
+.gallery a:hover {
+    border-color: var(--accent-color);
 }
 
-ul li a {
-    color: #005a87;
-    text-decoration: none;
+/* Accessibility Improvements */
+a:focus, button:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
