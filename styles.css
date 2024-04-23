@@ -125,19 +125,52 @@ button[type="submit"]:hover, button:hover {
     }
 }
 
-/* Gallery and Interactive Elements */
+/* Gallery column layout adjustment */
+.gallery .col-lg-4 {
+    /* Adjusting the column padding for better spacing and sizing */
+    padding: 0 15px;
+}
+
+/* Refining gallery image styling */
+.gallery img {
+    max-width: 100%; /* Ensures images are never larger than their container */
+    max-height: 250px; /* New maximum height for better control */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+    object-fit: cover; /* Ensures images cover the area without distorting */
+}
+
+/* Responsive adjustments for gallery images */
+@media (min-width: 768px) {
+    .gallery .col-md-6 {
+        /* Provides more space around images by adjusting column padding at larger screens */
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery img {
+        max-height: 200px; /* Smaller max height for mobile devices */
+    }
+}
+
+/* Additional Gallery Styles */
 .gallery a {
-    display: inline-block;
-    margin: 10px;
-    border: 3px solid transparent; /* Adds a border for hovered items */
+    display: block; /* ensures the link fills the column for easier clicking */
+    margin: 0 auto; /* centers images within the columns */
 }
 
-.gallery a:hover {
-    border-color: var(--accent-color);
+/* Ensure images have some spacing around them */
+.gallery img {
+    margin-bottom: 15px; /* adds spacing below each image */
+    border-radius: 8px; /* optional rounded corners */
 }
 
-/* Accessibility Improvements */
-a:focus, button:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 2px;
+
+/* Responsive settings for smaller devices */
+@media (max-width: 768px) {
+    .gallery img {
+        max-height: 300px; /* Smaller max height for small devices */
+    }
 }
+

@@ -2,64 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stamp Gallery</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
+    <header>
         <h1>Stamp Gallery</h1>
         <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link text-white">About Us</a></li>
-                <li class="nav-item"><a href="events.html" class="nav-link text-white">Events</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link text-white">Gallery</a></li>
-                <li class="nav-item"><a href="membership.html" class="nav-link text-white">Membership</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link text-white">Contact</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="container mt-5">
         <div class="row text-center">
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Benjamin_Franklin2_1895_Issue-1c.jpg" data-lightbox="gallery" data-title="Benjamin Franklin 1¢, 1895 Issue">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Benjamin_Franklin2_1895_Issue-1c.jpg" alt="Benjamin Franklin 1¢, 1895 Issue" class="img-fluid">
-                </a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Benjamin_Franklin2_1895_Issue-1c.jpg" alt="Benjamin Franklin 1¢, 1895 Issue" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="https://upload.wikimedia.org/wikipedia/commons/1/1d/Canada_bluenose_1928_issue-50c.jpg" data-lightbox="gallery" data-title="Canada Bluenose 50¢, 1928 Issue">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Canada_bluenose_1928_issue-50c.jpg" alt="Canada Bluenose 50¢, 1928 Issue" class="img-fluid">
-                </a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Canada_bluenose_1928_issue-50c.jpg" alt="Canada Bluenose 50¢, 1928 Issue" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
-                <a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Hindenburg_Olympiafahrt_1936.jpg" data-lightbox="gallery" data-title="Hindenburg Olympiafahrt, 1936">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Hindenburg_Olympiafahrt_1936.jpg" alt="Hindenburg Olympiafahrt, 1936" class="img-fluid">
-                </a>
-            </div>
-        </div>
-        <div class="controls my-4 text-center">
-            <div class="mb-3">
-                <label for="sort" class="form-label">Sort by:</label>
-                <select id="sort" class="form-select">
-                    <option value="name">Name</option>
-                    <option value="date">Date</option>
-                    <option value="country">Country</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="filter" class="form-label">Filter by country:</label>
-                <select id="filter" class="form-select">
-                    <option value="all">All</option>
-                    <option value="USA">USA</option>
-                    <option value="Canada">Canada</option>
-                    <!-- Add other countries as needed -->
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="search" class="form-label">Search:</label>
-                <input type="text" id="search" class="form-control" placeholder="Search stamps...">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Hindenburg_Olympiafahrt_1936.jpg" alt="Hindenburg Olympiafahrt, 1936" class="img-fluid">
             </div>
         </div>
     </main>
