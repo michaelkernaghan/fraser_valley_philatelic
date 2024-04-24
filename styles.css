@@ -57,9 +57,20 @@ nav ul li a.active {
 /* Main Content Styling */
 
 main {
-    width: 80%; /* Adjusts the width to 80% of the viewport */
-    margin: 0 auto; /* Centers the main content horizontally */
-    padding: 20px; /* Adds padding for better spacing */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background to unify text and images */
+}
+
+h2 {
+    color: #005a87; /* Echoing the header color to maintain theme consistency */
+    margin-top: 0;
+    margin-bottom: 20px; /* Adds space between the heading and the following text */
+}
+
+p {
+    font-size: 1.2rem; /* Slightly larger font size for readability */
+    color: #333; /* Darker text for contrast against light background */
+    margin-bottom: 30px; /* Adds more space before the images */
 }
 
 /* Footer Styling */
@@ -207,3 +218,17 @@ p {
 }
 
 
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0; /* Adds vertical padding around the images for breathing space */
+}
+
+.image-gallery img {
+    max-width: 100%;
+    max-height: 200px; /* Controlled size for uniform appearance */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners for a softer look */
+}
