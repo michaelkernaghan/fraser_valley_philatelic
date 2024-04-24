@@ -169,14 +169,22 @@ p {
     font-size: 1rem; /* Standard size for body text */
     line-height: 1.6; /* Improved line spacing for readability */
 }
+/* Add or update these styles in your styles.css file */
 
+.gallery {
+    padding: 20px;
+}
 
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0; /* Adds vertical padding around the images for breathing space */
+.stamp-card {
+    border: 1px solid #ccc; /* Adds a subtle border */
+    padding: 10px;
+    border-radius: 5px; /* Slightly rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+    background: #fff; /* Background color for the card */
+    display: flex; /* Using flex to center the image vertically */
+    flex-direction: column; /* Stack the image and title */
+    align-items: center; /* Center align the items horizontally */
 }
 
 .image-gallery img {
