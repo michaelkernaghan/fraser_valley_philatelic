@@ -82,6 +82,10 @@ footer {
     margin-top: 20px;
 }
 
+footer.bg-dark p {
+    color: white; /* Ensures text color is white */
+}
+
 /* Forms and Input Styling */
 form {
     max-width: 600px;
@@ -138,55 +142,6 @@ button[type="submit"]:hover, button:hover {
     }
 }
 
-/* Gallery column layout adjustment */
-.gallery .col-lg-4 {
-    /* Adjusting the column padding for better spacing and sizing */
-    padding: 0 15px;
-}
-
-/* Refining gallery image styling */
-.gallery img {
-    max-width: 100%; /* Ensures images are never larger than their container */
-    max-height: 250px; /* New maximum height for better control */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 8px; /* Optional: Adds rounded corners to images */
-    object-fit: cover; /* Ensures images cover the area without distorting */
-}
-
-/* Responsive adjustments for gallery images */
-@media (min-width: 768px) {
-    .gallery .col-md-6 {
-        /* Provides more space around images by adjusting column padding at larger screens */
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    .gallery img {
-        max-height: 200px; /* Smaller max height for mobile devices */
-    }
-}
-
-/* Additional Gallery Styles */
-.gallery a {
-    display: block; /* ensures the link fills the column for easier clicking */
-    margin: 0 auto; /* centers images within the columns */
-}
-
-/* Ensure images have some spacing around them */
-.gallery img {
-    margin-bottom: 15px; /* adds spacing below each image */
-    border-radius: 8px; /* optional rounded corners */
-}
-
-
-/* Responsive settings for smaller devices */
-@media (max-width: 768px) {
-    .gallery img {
-        max-height: 300px; /* Smaller max height for small devices */
-    }
-}
-
 /* Apply Google Fonts */
 body {
     font-family: 'Open Sans', sans-serif; /* Sets Open Sans as the default body font */
@@ -216,19 +171,43 @@ p {
     font-size: 1rem; /* Standard size for body text */
     line-height: 1.6; /* Improved line spacing for readability */
 }
+/* Add or update these styles in your styles.css file */
 
-
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0; /* Adds vertical padding around the images for breathing space */
+.gallery {
+    padding: 20px;
 }
 
-.image-gallery img {
-    max-width: 100%;
-    max-height: 200px; /* Controlled size for uniform appearance */
-    height: auto;
-    border-radius: 8px; /* Optional: adds rounded corners for a softer look */
+.stamp-card {
+    border: 1px solid #ccc; /* Adds a subtle border */
+    padding: 10px;
+    border-radius: 5px; /* Slightly rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+    background: #fff; /* Background color for the card */
+    display: flex; /* Using flex to center the image vertically */
+    flex-direction: column; /* Stack the image and title */
+    align-items: center; /* Center align the items horizontally */
+}
+
+.stamp-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+}
+
+.stamp-card img {
+    max-width: 100%; /* Ensures the image does not exceed the width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits within its boundary without being cut off */
+    margin-bottom: 10px; /* Space between image and title */
+}
+
+.stamp-title {
+    text-align: center; /* Center-align the stamp title */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .gallery .row .col-lg-3 {
+        max-width: 50%; /* Adjusting to display two columns on smaller screens */
+        flex: 0 0 50%; /* Flex settings for grid adjustments on smaller screens */
+    }
 }
