@@ -232,3 +232,48 @@ p {
         flex: 0 0 50%; /* Flex settings for grid adjustments on smaller screens */
     }
 }
+
+/* Meetings Page Specific Styles */
+.meetings-info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.meeting-dates {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    text-align: left; /* Align text to the left inside the list */
+}
+
+.meeting-dates li {
+    padding: 10px 0; /* Adds vertical padding for better spacing */
+    border-bottom: 1px solid var(--secondary-color); /* Adds a subtle line between items */
+}
+
+.meeting-dates li:last-child {
+    border-bottom: none; /* Removes the border from the last item */
+}
+
+.meeting-dates li strong {
+    color: var(--primary-color); /* Highlights the date using the primary color */
+    margin-right: 5px; /* Space between date and description */
+}
+
+/* Adjustments to typography to align with the meeting theme */
+.meetings-info h2, .meetings-info h3 {
+    color: var(--primary-color);
+}
+
+.meetings-info p {
+    font-size: 1rem; /* Ensuring consistency in font size across all paragraphs */
+}
+
+/* Enhancing responsiveness for meeting info sections */
+@media (max-width: 768px) {
+    .meetings-info {
+        padding: 10px;
+    }
+}
