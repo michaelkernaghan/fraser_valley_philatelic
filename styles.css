@@ -299,4 +299,7 @@ ol.custom-numbering li:before {
     position: absolute; /* Positions the number absolutely within the 'li' */
     left: 0; /* Aligns the number to the left */
 }
+.indented-list {
+    padding-left: 20px; /* This also indents the list but maintains the bullet points aligned with other content */
+}
 
