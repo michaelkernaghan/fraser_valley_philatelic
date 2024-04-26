@@ -277,3 +277,26 @@ p {
         padding: 10px;
     }
 }
+
+.leadership-profiles img {
+    width: 200px;  /* Sets the width of the images */
+    height: 200px; /* Sets the height of the images */
+    object-fit: cover; /* Ensures the images cover the dimensions without distorting aspect ratio */
+}
+ol.custom-numbering {
+    counter-reset: item; /* Creates a new instance of the counter named 'item' */
+}
+
+ol.custom-numbering li {
+    list-style-type: none; /* Removes the default list item marker */
+    position: relative;
+    padding-left: 30px; /* Gives space for the custom number */
+}
+
+ol.custom-numbering li:before {
+    content: counter(item) "."; /* Uses the counter as content */
+    counter-increment: item; /* Increments the counter */
+    position: absolute; /* Positions the number absolutely within the 'li' */
+    left: 0; /* Aligns the number to the left */
+}
+
