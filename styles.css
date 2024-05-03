@@ -303,3 +303,18 @@ ol.custom-numbering li:before {
     padding-left: 20px; /* This also indents the list but maintains the bullet points aligned with other content */
 }
 
+/* Global Container for Consistent Margins */
+.container {
+    width: 60%; /* Occupies 60% of the width, giving 20% margin on each side */
+    margin: 0 auto; /* Centers the container and maintains equal margins on both sides */
+    padding: 20px; /* Optional padding for aesthetic spacing inside the container */
+}
+
+/* Enhanced Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Increases width on smaller screens but maintains some margin */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
