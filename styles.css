@@ -318,3 +318,7 @@ ol.custom-numbering li:before {
     }
 }
 
+.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}

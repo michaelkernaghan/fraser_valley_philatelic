@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Log files
+*.log
+
+# Directory for built artifacts
+/dist
+
+# Environment files
+.env
+
+# Editor directories and files
+.vscode/
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
