@@ -317,8 +317,18 @@ ol.custom-numbering li:before {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 }
-
-.no-margin {
-    margin-top: 0;
-    margin-bottom: 0;
+/* Specific styles for the index page container */
+.index-container {
+    width: 48%; /* Narrower width specifically for the index page */
+    margin: 0 auto; /* Keeps it centered */
+    padding: 20px; /* Maintains padding for aesthetic spacing */
 }
+
+/* Responsive adjustments for the index page container */
+@media (max-width: 768px) {
+    .index-container {
+        width: 80%; /* Adjusted width for smaller screens to maintain readability */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
