@@ -68,9 +68,9 @@ h2 {
 }
 
 p {
-    font-size: 1.2rem; /* Slightly larger font size for readability */
-    color: #333; /* Darker text for contrast against light background */
-    margin-bottom: 30px; /* Adds more space before the images */
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 
 /* Footer Styling */
@@ -166,8 +166,9 @@ main h3 {
 }
 
 p {
-    font-size: 1rem; /* Standard size for body text */
-    line-height: 1.6; /* Improved line spacing for readability */
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 /* Add or update these styles in your styles.css file */
 
@@ -300,7 +301,12 @@ ol.custom-numbering li:before {
     left: 0; /* Aligns the number to the left */
 }
 .indented-list {
-    padding-left: 20px; /* This also indents the list but maintains the bullet points aligned with other content */
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.indented-list li {
+    margin-bottom: 5px;
 }
 
 /* Global Container for Consistent Margins */
