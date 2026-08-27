@@ -338,3 +338,12 @@ ol.custom-numbering li:before {
     }
 }
 
+
+/* Show poster on the events page (no Bootstrap on this page, so size it here) */
+.event-poster {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
