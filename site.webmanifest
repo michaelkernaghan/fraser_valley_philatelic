@@ -1,0 +1,21 @@
+{
+    "name": "Fraser Valley Stamp Club",
+    "short_name": "FV Stamp Club",
+    "description": "Stamp collecting, trading and auctions in Abbotsford, British Columbia.",
+    "icons": [
+        {
+            "src": "/images/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#005a87",
+    "background_color": "#f4f4f4",
+    "display": "standalone",
+    "start_url": "/"
+}

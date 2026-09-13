@@ -347,3 +347,121 @@ ol.custom-numbering li:before {
     height: auto;
     border-radius: 8px;
 }
+
+/* --- Local fallbacks for Bootstrap utility classes ------------------------
+   Bootstrap is loaded on index.html only, but about, events, links, meetings
+   and membership all use .container. Without these rules those pages have no
+   max-width and no side gutter, so text runs to the screen edge on a phone.
+   styles.css loads after the CDN, so these also govern index.html. */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* no global image constraint existed; only a few scoped ones */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Footer links --------------------------------------------------------- */
+footer a {
+    color: #ffd9a8;
+    text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+    color: white;
+}
+
+/* --- Sticky call to action (phones only) ---------------------------------- */
+.sticky-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-cta {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 900;
+        background-color: var(--secondary-color);
+        border-top: 3px solid var(--accent-color);
+        padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .sticky-cta a {
+        display: block;
+        background-color: var(--accent-color);
+        color: #33200e;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        border-radius: 4px;
+        font-size: 1.05rem;
+    }
+
+    body {
+        padding-bottom: 6rem;
+    }
+}
+
+/* --- Homepage hero -------------------------------------------------------- */
+.hero {
+    /* a shade darker than the header, plus an accent rule: without these the
+       hero and the header are the same blue and read as one undivided block */
+    background-color: var(--secondary-color);
+    border-top: 3px solid var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: clamp(2rem, 7vw, 3.5rem) 1.25rem;
+}
+
+.hero h2 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: clamp(1.5rem, 4.5vw, 2.25rem);
+    color: white;
+    margin: 0 0 0.6rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.4vw, 1.15rem);
+    max-width: 46ch;
+    margin: 0 auto 1.5rem;
+    color: #e4eef5;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    justify-content: center;
+}
+
+.hero-actions a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-primary {
+    background-color: var(--accent-color);
+    color: #33200e;
+}
+
+.hero-secondary {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
