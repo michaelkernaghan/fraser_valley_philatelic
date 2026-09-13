@@ -22,7 +22,7 @@ import pathlib
 import re
 import subprocess
 
-SITE = 'https://fraser-valley-philatelic.netlify.app'
+SITE = 'https://fraservalleystampclub.com'
 EXTENSIONLESS = True
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 

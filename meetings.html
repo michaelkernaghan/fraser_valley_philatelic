@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="canonical" href="https://fraser-valley-philatelic.netlify.app/meetings">
+    <link rel="canonical" href="https://fraservalleystampclub.com/meetings">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
@@ -20,8 +20,8 @@
     <meta property="og:locale" content="en_CA">
     <meta property="og:title" content="Meetings | Fraser Valley Stamp Club">
     <meta property="og:description" content="The Fraser Valley Stamp Club meets on the second Tuesday of most months in Abbotsford, with open trading, a silent auction and a members buy board.">
-    <meta property="og:url" content="https://fraser-valley-philatelic.netlify.app/meetings">
-    <meta property="og:image" content="https://fraser-valley-philatelic.netlify.app/images/og-card.jpg">
+    <meta property="og:url" content="https://fraservalleystampclub.com/meetings">
+    <meta property="og:image" content="https://fraservalleystampclub.com/images/og-card.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="The Penny Black stamp beside the words Fraser Valley Stamp Club, Abbotsford, British Columbia">
@@ -50,28 +50,75 @@
     <main class="container">
         <section>
             <h2>Regular Meetings</h2>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                The Fraser Valley Stamp Club meets typically on the second Tuesday of each month, 
-                except July and August.
+            <p>
+                The Fraser Valley Stamp Club meets on the <strong>second Tuesday of each
+                month, except July and August</strong>, from 6:00 to 9:00 PM in the school library at
+                W.J. Mouat Secondary School, 32355 Mouat Drive, Abbotsford, BC.
             </p>
-            <h3>Next Meeting</h3>
-            <ul class="indented-list">
-                <li><strong>Tuesday, Sept. 8, 2026, 1:00 PM to 3:00 PM at the Chances Casino,
-                    30835 Peardonville Rd, Abbotsford, BC V2T 6K2.</strong></li>
+
+            <h3>Upcoming meetings</h3>
+            <ul class="indented-list" id="upcomingMeetings">
+                <li>Second Tuesday of each month except July and August, 6:00 PM.</li>
             </ul>
-            <p style="margin-left: 50px; margin-right: 50px;">
-                <strong>October and later meetings:</strong> we expect to meet at 6:00 PM in the school library
-                at W.J. Mouat Secondary School, 32355 Mouat Drive, Abbotsford, BC, once the school board
-                approves our booking. Dates will be posted here as soon as they are confirmed.
+
+            <h3>What happens at a meeting</h3>
+            <p>
+                There is active trading throughout, as well as a silent auction and a buy
+                board with lots submitted by members. People start arriving at 6:00 PM, the
+                table (silent) auction closes at 7:30 PM, and a short business meeting
+                follows.
             </p>
-            <br>
-            <p>At each meeting, there is active trading as well as a silent auction and a buy board with lots submitted by members. 
-            <p>The Sept. 8 meeting at the Chances Casino follows this same format, fitted to the 1:00 PM to 3:00 PM window. 
-            <p>At the regular evening meetings, people start arriving at 6:00 PM, the table (silent) auction closes at 7:30 PM, then we have a short business meeting after that. 
-            <p>At the November meeting, there is an annual call auction with approximately 100 lots varying in value from $5 to $250.</p>
-            <br>
+            <p>
+                At the November meeting there is an annual call auction with roughly 100
+                lots, ranging in value from $5 to $250.
+            </p>
+            <p>
+                Visitors are welcome &ndash; come along and introduce yourself, or
+                <a href="membership.html">join the club</a> for $10 a year.
+            </p>
         </section>
     </main>
+
+    <script>
+        // The dates work themselves out, so this page cannot go stale the way a
+        // hand-typed "next meeting" does. Second Tuesday of each month, no July or August.
+        (function () {
+            function secondTuesday(year, month) {
+                var d = new Date(year, month, 1);
+                var offset = (2 - d.getDay() + 7) % 7;   // 2 = Tuesday
+                return new Date(year, month, 1 + offset + 7);
+            }
+
+            var now = new Date();
+            var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var list = [];
+
+            for (var i = 0; i < 14 && list.length < 4; i++) {
+                var probe = new Date(now.getFullYear(), now.getMonth() + i, 1);
+                var month = probe.getMonth();
+                if (month === 6 || month === 7) { continue; }   // July, August
+                var meeting = secondTuesday(probe.getFullYear(), month);
+                if (meeting >= today) { list.push(meeting); }
+            }
+
+            if (!list.length) { return; }
+
+            var ul = document.getElementById('upcomingMeetings');
+            ul.innerHTML = '';
+            list.forEach(function (d, i) {
+                var li = document.createElement('li');
+                var text = d.toLocaleDateString('en-CA', {
+                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                }) + ', 6:00 PM';
+                if (i === 0) {
+                    li.innerHTML = '<strong>' + text + '</strong>';
+                } else {
+                    li.textContent = text;
+                }
+                ul.appendChild(li);
+            });
+        })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <footer>
         <p>&copy; 2026 Fraser Valley Stamp Club. All rights reserved. &middot; <a href="privacy.html">Privacy</a></p>

@@ -5,7 +5,7 @@ The beacon ships with the placeholder CF_BEACON_TOKEN, so analytics is installed
 but inert. To turn it on:
 
   1. dash.cloudflare.com -> Analytics & Logs -> Web Analytics -> Add a site
-  2. Enter fraser-valley-philatelic.netlify.app. Cloudflare shows a snippet
+  2. Enter fraservalleystampclub.com. Cloudflare shows a snippet
      containing a 32-character hex token.
   3. From the repo root:
 
