@@ -93,12 +93,16 @@
             var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
             var list = [];
 
-            for (var i = 0; i < 14 && list.length < 4; i++) {
+            // Every remaining meeting of the season, which closes with the June
+            // meeting. Once June has passed the list rolls over to the next season.
+            for (var i = 0; i < 14; i++) {
                 var probe = new Date(now.getFullYear(), now.getMonth() + i, 1);
                 var month = probe.getMonth();
                 if (month === 6 || month === 7) { continue; }   // July, August
                 var meeting = secondTuesday(probe.getFullYear(), month);
-                if (meeting >= today) { list.push(meeting); }
+                if (meeting < today) { continue; }
+                list.push(meeting);
+                if (month === 5) { break; }   // June
             }
 
             if (!list.length) { return; }
